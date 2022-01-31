@@ -1,0 +1,41 @@
+<html>
+<head>
+  <h1> Nazerke Adilgali CS-2122 </h1>
+  <title>Display Current Date and Time in Html using Javascript</title>
+</head>
+<body>
+  <h3>Get current date using JavaScript.</h3>
+
+  <h2 id="displayDateTime"></h2>
+</body>
+  <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var year = today.getFullYear()
+  var datt = today.getDate()
+  var month= today.getMonth()+1
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+
+  document.getElementById("displayDateTime").innerHTML = dateTime + ' <br> Today is :- ' + daylist[day] + ' <br> Year :- ' + [year] + ' <br> Date :- ' + [datt] + ' <br> Month :- ' + [month] ;
+  </script>
+  <head>
+<meta charset=utf-8 />
+<title>JavaScript program to calculate multiplication and division of two numbers </title>
+<style type="text/css">
+body {margin: 30px;}
+</style>
+</head>
+<body>
+<form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" />
+</form>
+<p>The Result is : <br>
+<span id = "result"></span>
+</p>
+</body>
